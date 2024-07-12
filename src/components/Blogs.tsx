@@ -35,7 +35,7 @@ const musicSchoolContent = [
   },
 ];
 
-function WhyChooseUs() {
+function Blogs() {
   return (
     <div>
       <StickyScroll content={musicSchoolContent} />
@@ -43,4 +43,4 @@ function WhyChooseUs() {
   );
 }
 
-export default WhyChooseUs;
+export default Blogs;

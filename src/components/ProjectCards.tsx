@@ -13,7 +13,7 @@ interface Course {
   isFeatured: boolean;
 }
 
-function FeaturedCourses() {
+function ProjectCards() {
   const featuredCourses = courseData.courses.filter(
     (course: Course) => course.isFeatured
   );
@@ -60,4 +60,4 @@ function FeaturedCourses() {
   );
 }
 
-export default FeaturedCourses;
+export default ProjectCards;

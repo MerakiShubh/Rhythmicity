@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
+import mypic from "../../public/mypic.png";
 import { Spotlight } from "./ui/Spotlight";
-import { Button } from "./ui/moving-border";
-
+// import { Button } from "./ui/moving-border";
 function HeroSection() {
   return (
     <div className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
@@ -9,16 +10,25 @@ function HeroSection() {
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
-      <div className="p-4 relative z-10 w-full text-center">
-        <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-          Master the art of music
-        </h1>
-        <p className="mt-4 font-normal text-base md:text-lg text-neutral-300 max-w-lg mx-auto">
-          Dive into our comprehensive music courses and transform your musical
-          journey today. Whether you&apoc;re a beginner or looking to refine
-          your skills, join us to unlock your true potential.
-        </p>
-        <div className="mt-4">
+      <div className="p-4 relative z-10 w-full flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-10 md:space-y-0 md:space-x-10">
+        <div className="flex-shrink-0">
+          <Image
+            src={mypic}
+            alt="Profile Picture"
+            width={300}
+            height={300}
+            className="rounded-full"
+          />
+        </div>
+        <div className="md:flex-grow w-full">
+          <p className="text-2xl">Hello, I’m</p>
+          <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+            Shubham Tiwari
+          </h1>
+          <p className="mt-4 font-normal text-base md:text-lg text-neutral-300 max-w-lg mx-auto">
+            CREATIVE FULL STACK WEB DEVELOPER
+          </p>
+          {/* <div className="mt-4">
           <Link href={"/courses"}>
             <Button
               borderRadius="1.75rem"
@@ -27,6 +37,7 @@ function HeroSection() {
               Explore courses
             </Button>
           </Link>
+        </div> */}
         </div>
       </div>
     </div>
