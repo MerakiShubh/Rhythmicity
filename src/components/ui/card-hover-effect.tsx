@@ -17,7 +17,7 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    category: string; // Add category to props
+    category: string;
   }[];
   className?: string;
 }) => {
@@ -57,15 +57,13 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <div className="h-80 w-80 ">
-            <Card>
-              <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {renderButtons(item.category)}
-              </div>
-            </Card>
-          </div>
+
+          <Card className="h-96 w-96">
+            <CardTitle>{item.title}</CardTitle>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+              {renderButtons(item.category)}
+            </div>
+          </Card>
         </div>
       ))}
     </div>
@@ -104,24 +102,5 @@ export const CardTitle = ({
     <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
-  );
-};
-
-export const CardDescription = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <p
-      className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
-        className
-      )}
-    >
-      {children}
-    </p>
   );
 };

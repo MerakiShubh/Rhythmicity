@@ -17,19 +17,25 @@ function Navbar({ className }: { className?: string }) {
             item="Home"
           ></MenuItem>
         </Link>
-        <Link href={"#"}>
+        <Link href={"/projects"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Projects"
+          ></MenuItem>
+        </Link>
+        <Link href={"/skillls"}>
           <MenuItem
             setActive={setActive}
             active={active}
             item="Skills"
           ></MenuItem>
         </Link>
-
-        <Link href={"/contact"}>
+        <Link href={"/blogs"}>
           <MenuItem
             setActive={setActive}
             active={active}
-            item="Projects"
+            item="Blogs"
           ></MenuItem>
         </Link>
         <Link href={"/contact"}>
@@ -37,13 +43,6 @@ function Navbar({ className }: { className?: string }) {
             setActive={setActive}
             active={active}
             item="Connect with me"
-          ></MenuItem>
-        </Link>
-        <Link href={"/contact"}>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Blogs"
           ></MenuItem>
         </Link>
       </Menu>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import mypic from "../../public/mypic.png";
 import { Spotlight } from "./ui/Spotlight";
-// import { Button } from "./ui/moving-border";
+import { Button } from "./ui/moving-border";
 function HeroSection() {
   return (
     <div className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
@@ -28,16 +28,16 @@ function HeroSection() {
           <p className="mt-4 font-normal text-base md:text-lg text-neutral-300 max-w-lg mx-auto">
             CREATIVE FULL STACK WEB DEVELOPER
           </p>
-          {/* <div className="mt-4">
-          <Link href={"/courses"}>
-            <Button
-              borderRadius="1.75rem"
-              className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-slate-800"
-            >
-              Explore courses
-            </Button>
-          </Link>
-        </div> */}
+          <div className="mt-4">
+            <Link href={"/resume"}>
+              <Button
+                borderRadius="1.75rem"
+                className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-slate-800"
+              >
+                Resume
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
