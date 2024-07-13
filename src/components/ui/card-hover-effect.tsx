@@ -2,6 +2,13 @@ import { cn } from "../../utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { buttons } from "../Skills";
+
+interface Item {
+  title: string;
+  description: string;
+  category: string;
+}
 
 export const HoverEffect = ({
   items,
@@ -10,31 +17,33 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    link: string;
+    category: string; // Add category to props
   }[];
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  const renderButtons = (category) => {
+    return buttons
+      .filter((button) => button.category === category)
+      .map((button, idx) => <div key={idx}>{button.component}</div>);
+  };
+
   return (
     <div
-      className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
-        className
-      )}
+      className={cn("flex justify-center items-center gap-10 p-10", className)}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
-          className="relative group  block p-2 h-full w-full"
+        <div
+          key={item.title}
+          className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -48,11 +57,16 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-          </Card>
-        </Link>
+          <div className="h-80 w-80 ">
+            <Card>
+              <CardTitle>{item.title}</CardTitle>
+              <CardDescription>{item.description}</CardDescription>
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {renderButtons(item.category)}
+              </div>
+            </Card>
+          </div>
+        </div>
       ))}
     </div>
   );
@@ -78,6 +92,7 @@ export const Card = ({
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -91,6 +106,7 @@ export const CardTitle = ({
     </h4>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
