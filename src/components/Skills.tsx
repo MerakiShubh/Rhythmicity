@@ -82,6 +82,16 @@ export const buttons = [
     component: dockerButtonStyle("NextJs"),
   },
   {
+    name: "Appwrite",
+    category: "Backend",
+    component: dockerButtonStyle("Appwrite"),
+  },
+  {
+    name: "WebSocket",
+    category: "Backend",
+    component: dockerButtonStyle("WebSocket"),
+  },
+  {
     name: "Docker",
     category: "Deployment",
     component: dockerButtonStyle("Docker"),
@@ -110,5 +120,10 @@ export const buttons = [
     name: "Postman",
     category: "Tools",
     component: dockerButtonStyle("Postman"),
+  },
+  {
+    name: "Git",
+    category: "Tools",
+    component: dockerButtonStyle("Git"),
   },
 ];
