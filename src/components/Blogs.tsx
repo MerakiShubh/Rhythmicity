@@ -2,43 +2,54 @@
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
-const musicSchoolContent = [
+const blogsContent = [
   {
-    title: "Discover Your Sound with Us: A Personal Journey in Music Mastery",
+    title: "Introduction to Virtual Machines: A Comprehensive Guide",
     description:
-      "Embark on a musical journey that’s uniquely yours. Our personalized instruction adapts to your individual needs, setting the stage for unparalleled growth and creativity. At our music school, your aspirations meet our dedicated support, creating a harmonious path to mastery.",
+      "Discover the evolution and architecture of virtual machines, and learn how to set up and manage them using a Type-2 hypervisor. Perfect for web developers looking to deploy applications efficiently on VMs.",
+    url: "https://merakishubh.hashnode.dev/virtual-machine",
   },
   {
-    title: "Discover Your Sound with Us: A Personal Journey in Music Mastery",
+    title: "Building Your Own YouTube Clone with MERN Stack",
     description:
-      "Embark on a musical journey that’s uniquely yours. Our personalized instruction adapts to your individual needs, setting the stage for unparalleled growth and creativity. At our music school, your aspirations meet our dedicated support, creating a harmonious path to mastery.",
+      "Explore how to create a YouTube-like video sharing platform using the MERN stack. This guide covers the tech stack, frontend, backend, and deployment processes to help you build and deploy your own Videotube project.",
+    url: "https://merakishubh.hashnode.dev/videotube-project",
   },
   {
-    title: "Discover Your Sound with Us: A Personal Journey in Music Mastery",
+    title: "Introduction to Virtual Machines: A Comprehensive Guide",
     description:
-      "Embark on a musical journey that’s uniquely yours. Our personalized instruction adapts to your individual needs, setting the stage for unparalleled growth and creativity. At our music school, your aspirations meet our dedicated support, creating a harmonious path to mastery.",
+      "Discover the evolution and architecture of virtual machines, and learn how to set up and manage them using a Type-2 hypervisor. Perfect for web developers looking to deploy applications efficiently on VMs.",
+    url: "https://merakishubh.hashnode.dev/virtual-machine",
   },
   {
-    title: "Live Feedback & Engagement",
+    title: "Building Your Own YouTube Clone with MERN Stack",
     description:
-      "Immerse yourself in an interactive learning experience where feedback is immediate, just like real-time changes in a collaborative project. This approach enhances your understanding and mastery of music concepts and performance techniques.",
+      "Explore how to create a YouTube-like video sharing platform using the MERN stack. This guide covers the tech stack, frontend, backend, and deployment processes to help you build and deploy your own Videotube project.",
+    url: "https://merakishubh.hashnode.dev/videotube-project",
   },
   {
-    title: "Cutting-Edge Curriculum",
+    title: "Introduction to Virtual Machines: A Comprehensive Guide",
     description:
-      "Our curriculum is continuously updated to include the latest music education trends and technologies, ensuring you’re always learning with the most current and effective methods. Say goodbye to outdated materials and welcome an education that evolves with the industry.",
+      "Discover the evolution and architecture of virtual machines, and learn how to set up and manage them using a Type-2 hypervisor. Perfect for web developers looking to deploy applications efficiently on VMs.",
+    url: "https://merakishubh.hashnode.dev/virtual-machine",
   },
   {
-    title: "Limitless Learning Opportunities",
+    title: "Building Your Own YouTube Clone with MERN Stack",
     description:
-      "With our expansive resource library and dynamic course offerings, you’ll never find yourself without something new to explore. Our platform provides continuous opportunities for growth, ensuring your musical skills are always advancing.",
+      "Explore how to create a YouTube-like video sharing platform using the MERN stack. This guide covers the tech stack, frontend, backend, and deployment processes to help you build and deploy your own Videotube project.",
+    url: "https://merakishubh.hashnode.dev/videotube-project",
   },
 ];
 
 function Blogs() {
   return (
     <div>
-      <StickyScroll content={musicSchoolContent} />
+      <div className="text-center">
+        <p className="mt-10  text-3xl leading-8 font-extrabold tracking-tight  sm:text-4xl">
+          Blogs
+        </p>
+      </div>
+      <StickyScroll content={blogsContent} />
     </div>
   );
 }

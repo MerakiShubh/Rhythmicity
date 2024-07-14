@@ -9,6 +9,7 @@ export const StickyScroll = ({
   content: {
     title: string;
     description: string;
+    url: string;
   }[];
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
@@ -27,6 +28,9 @@ export const StickyScroll = ({
       }
     });
   });
+  const redirectToBlog = (url: string) => {
+    window.location.href = url;
+  };
 
   const backgroundColors = [
     "var(--slate-900)",
@@ -72,6 +76,17 @@ export const StickyScroll = ({
               >
                 {item.description}
               </motion.p>
+              <div className="mt-8">
+                <button
+                  onClick={() => redirectToBlog(item.url)}
+                  className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                >
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                    Read Blog
+                  </span>
+                </button>
+              </div>
             </div>
           ))}
           <div className="h-40" />
