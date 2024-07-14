@@ -23,7 +23,7 @@ export const HoverEffect = ({
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const renderButtons = (category) => {
+  const renderButtons = (category: Item["category"]) => {
     return buttons
       .filter((button) => button.category === category)
       .map((button, idx) => <div key={idx}>{button.component}</div>);

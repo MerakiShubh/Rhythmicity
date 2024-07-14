@@ -3,9 +3,9 @@ import React from "react";
 import ProjectCards from "@/components/ProjectCards";
 import HeroSection from "@/components/HeroSection";
 import Blogs from "@/components/Blogs";
-import Aboutme from "@/components/Aboutme";
+import Responses from "@/components/Responses";
 import SkillsCard from "@/components/SkillsCard";
-
+import ConnectWithMe from "@/components/ConnectWithMe";
 export default function Home() {
   return (
     <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
@@ -22,7 +22,10 @@ export default function Home() {
         <Blogs />
       </section>
       <section id="contact">
-        <Aboutme />
+        <ConnectWithMe />
+      </section>
+      <section id="responses">
+        <Responses />
       </section>
     </main>
   );

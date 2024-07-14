@@ -47,14 +47,19 @@ export const buttons = [
     component: dockerButtonStyle("JavaScript"),
   },
   {
+    name: "Tailwind",
+    category: "Frontend",
+    component: dockerButtonStyle("Tailwind"),
+  },
+  {
     name: "React",
     category: "Frontend",
     component: dockerButtonStyle("React"),
   },
   {
-    name: "Tailwind",
+    name: "TypeScript",
     category: "Frontend",
-    component: dockerButtonStyle("Tailwind"),
+    component: dockerButtonStyle("TypeScript"),
   },
   {
     name: "NodeJS",

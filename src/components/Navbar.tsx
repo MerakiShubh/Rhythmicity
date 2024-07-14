@@ -40,6 +40,11 @@ function Navbar({ className }: { className?: string }) {
             Connect with me
           </MenuItem>
         </a>
+        <a href="#responses">
+          <MenuItem setActive={setActive} active={active} item="Responses">
+            Responses
+          </MenuItem>
+        </a>
       </Menu>
     </div>
   );
