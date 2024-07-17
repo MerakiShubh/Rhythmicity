@@ -1,14 +1,7 @@
 import { cn } from "../../utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
-import { buttons } from "../Skills";
-
-interface Item {
-  title: string;
-  description: string;
-  category: string;
-}
+import { ButtonsCard } from "./tailwindcss-buttons";
 
 export const HoverEffect = ({
   items,
@@ -16,27 +9,26 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    description: string;
-    category: string;
+    buttons: {
+      component: React.ReactNode;
+    }[];
+    link?: string;
   }[];
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const renderButtons = (category: Item["category"]) => {
-    return buttons
-      .filter((button) => button.category === category)
-      .map((button, idx) => <div key={idx}>{button.component}</div>);
-  };
-
   return (
     <div
-      className={cn("flex justify-center items-center gap-10 p-10", className)}
+      className={cn(
+        "grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 p-6 justify-center",
+        className
+      )}
     >
       {items.map((item, idx) => (
         <div
           key={item.title}
-          className="relative group block p-2 h-full w-full"
+          className="relative group block p-2  h-full w-full "
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -57,11 +49,12 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-
-          <Card className="h-96 w-96">
+          <Card>
             <CardTitle>{item.title}</CardTitle>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-              {renderButtons(item.category)}
+            <div className="relative top-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]">
+              {item.buttons.map((button, buttonIdx) => (
+                <ButtonsCard key={buttonIdx}>{button.component}</ButtonsCard>
+              ))}
             </div>
           </Card>
         </div>
@@ -80,12 +73,12 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl w-full h-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="pt-6 pb-8">{children}</div>
       </div>
     </div>
   );
@@ -99,7 +92,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 font-bold tracking-wide my-2", className)}>
       {children}
     </h4>
   );

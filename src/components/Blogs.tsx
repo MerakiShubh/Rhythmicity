@@ -45,7 +45,7 @@ function Blogs() {
   return (
     <div>
       <div className="text-center">
-        <p className="mt-10  text-3xl leading-8 font-extrabold tracking-tight  sm:text-4xl">
+        <p className="mt-10 pb-6 text-3xl leading-8 font-extrabold tracking-tight  sm:text-4xl">
           Blogs
         </p>
       </div>

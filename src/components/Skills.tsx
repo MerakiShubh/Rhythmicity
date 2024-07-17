@@ -5,11 +5,13 @@ import { ButtonsCard } from "./ui/tailwindcss-buttons";
 export function SkillButtons() {
   return (
     <div className="pb-40 px-4 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto gap-10">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto gap-10 "> */}
+      <div>
         {buttons.map((button, idx) => (
           <ButtonsCard key={idx}>{button.component}</ButtonsCard>
         ))}
       </div>
+      {/* </div> */}
     </div>
   );
 }
@@ -24,7 +26,7 @@ interface Button {
 const dockerButtonStyle = (text: any) => (
   <button className="p-[3px] relative ">
     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-    <div className="px-4 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+    <div className="px-[8px] py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
       {text}
     </div>
   </button>
@@ -37,14 +39,14 @@ export const buttons = [
     component: dockerButtonStyle("HTML"),
   },
   {
-    name: "CSS",
-    category: "Frontend",
-    component: dockerButtonStyle("CSS"),
-  },
-  {
     name: "JavaScript",
     category: "Frontend",
     component: dockerButtonStyle("JavaScript"),
+  },
+  {
+    name: "CSS",
+    category: "Frontend",
+    component: dockerButtonStyle("CSS"),
   },
   {
     name: "Tailwind",
@@ -67,9 +69,9 @@ export const buttons = [
     component: dockerButtonStyle("NodeJS"),
   },
   {
-    name: "Express",
+    name: "Redis",
     category: "Backend",
-    component: dockerButtonStyle("Express"),
+    component: dockerButtonStyle("Redis"),
   },
   {
     name: "MongoDB",
@@ -77,9 +79,9 @@ export const buttons = [
     component: dockerButtonStyle("MongoDB"),
   },
   {
-    name: "Redis",
+    name: "Express",
     category: "Backend",
-    component: dockerButtonStyle("Redis"),
+    component: dockerButtonStyle("Express"),
   },
   {
     name: "NextJs",
@@ -117,9 +119,9 @@ export const buttons = [
     component: dockerButtonStyle("VSCode"),
   },
   {
-    name: "Ubuntu",
+    name: "Git",
     category: "Tools",
-    component: dockerButtonStyle("Ubuntu"),
+    component: dockerButtonStyle("Git"),
   },
   {
     name: "Postman",
@@ -127,8 +129,8 @@ export const buttons = [
     component: dockerButtonStyle("Postman"),
   },
   {
-    name: "Git",
+    name: "Ubuntu",
     category: "Tools",
-    component: dockerButtonStyle("Git"),
+    component: dockerButtonStyle("Ubuntu"),
   },
 ];

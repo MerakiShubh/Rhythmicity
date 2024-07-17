@@ -31,3 +31,15 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Add this CSS to your styles */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+  /* For Webkit-based browsers (Chrome, Safari, etc.) */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
