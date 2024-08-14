@@ -94,9 +94,9 @@ export const buttons = [
     component: dockerButtonStyle("Appwrite"),
   },
   {
-    name: "WebSocket",
+    name: "Socket.io",
     category: "Backend",
-    component: dockerButtonStyle("WebSocket"),
+    component: dockerButtonStyle("Socket.io"),
   },
   {
     name: "Docker",

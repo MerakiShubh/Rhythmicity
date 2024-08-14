@@ -29,7 +29,11 @@ function HeroSection() {
             CREATIVE FULL STACK WEB DEVELOPER
           </p>
           <div className="mt-4">
-            <Link href={"/resume"}>
+            <Link
+              href="https://drive.google.com/file/d/189KZVmdfxPD7VsWQzgmoVAwraY-3CokD/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 borderRadius="1.75rem"
                 className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-slate-800"
