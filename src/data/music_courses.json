@@ -9,12 +9,12 @@
       "url": "https://editsync.merakishubh.com"
     },
     {
-      "id": 2,
-      "title": "VideoTube",
-      "description": "videoTube is a platform where users can upload, play, like, comment on videos, save liked videos, track watched videos",
-      "image": "/project1.jpg",
+      "id": 4,
+      "title": "Streamify",
+      "description": "Streamify is video streaming platform where user can upload videos in different quality ranges and a can share videos",
+      "image": "/streamifyThumbnail.png",
       "isFeatured": true,
-      "url": "https://videotube.merakishubh.com"
+      "url": "https://streamify.merakishubh.com"
     },
     {
       "id": 3,
@@ -26,11 +26,11 @@
     },
     {
       "id": 4,
-      "title": "Streamify",
-      "description": "Streamify is video streaming platform where user can upload videos in different quality ranges and a can share videos",
-      "image": "/streamifyThumbnail.png",
+      "title": "VideoTube",
+      "description": "videoTube is a platform where users can upload, play, like, comment on videos, save liked videos, track watched videos",
+      "image": "/project1.jpg",
       "isFeatured": true,
-      "url": "https://streamify.merakishubh.com"
+      "url": "https://videotube.merakishubh.com"
     },
     {
       "id": 5,
