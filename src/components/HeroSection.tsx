@@ -11,7 +11,7 @@ function HeroSection() {
         fill="white"
       />
       <div className="p-4 relative z-10 w-full flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-10 md:space-y-0 md:space-x-10">
-        <div className="flex-shrink-0">
+        {/* <div className="flex-shrink-0">
           <Image
             src={mypic}
             alt="Profile Picture"
@@ -19,7 +19,7 @@ function HeroSection() {
             height={300}
             className="rounded-full"
           />
-        </div>
+        </div> */}
         <div className="md:flex-grow w-full">
           <p className="text-2xl">Hello, I’m</p>
           <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
