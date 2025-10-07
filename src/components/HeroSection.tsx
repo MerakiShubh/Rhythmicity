@@ -30,7 +30,7 @@ function HeroSection() {
           </p>
           <div className="mt-4">
             <Link
-              href="https://drive.google.com/file/d/1W9WTI4iI-ZJkN9nfrxIuIuHtQh4qQxwY/view?usp=sharing"
+              href="https://drive.google.com/file/d/1rEGBUbuCwKiZc7hOHYnXqwnu1Zc9R12h/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >

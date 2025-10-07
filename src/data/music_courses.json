@@ -6,7 +6,7 @@
       "description": "An online collaborative code editor where you can write, debug, and execute code in real time, allowing your peers to see the changes as they happen",
       "image": "/editSyncThumbnail.png",
       "isFeatured": true,
-      "url": "https://editsync.merakishubh.com"
+      "url": "https://codesync.merakishubh.dev"
     },
     {
       "id": 4,
@@ -14,23 +14,24 @@
       "description": "Streamify is video streaming platform where user can upload videos in different quality ranges and a can share videos",
       "image": "/streamifyThumbnail.png",
       "isFeatured": true,
-      "url": "https://streamify.merakishubh.com"
+      "url": "https://video-tube-frontend-v2.vercel.app/"
     },
+
     {
       "id": 3,
+      "title": "Vehicle Booking",
+      "description": "Built a secure Vehicle Booking System with JWT authentication, role-based access, Razorpay payments, and automated email notifications",
+      "image": "/vehicleBooking.png",
+      "isFeatured": true,
+      "url": "https://vehiclebooking.merakishubh.dev"
+    },
+    {
+      "id": 4,
       "title": "Performance tracker",
       "description": "A npm package which is use to tell server perfromance like cpu usage, memory consumption, response time and uptime of a server",
       "image": "/PerformanceThumbnail.png",
       "isFeatured": true,
       "url": "https://www.npmjs.com/package/my-performance-tracker"
-    },
-    {
-      "id": 4,
-      "title": "VideoTube",
-      "description": "videoTube is a platform where users can upload, play, like, comment on videos, save liked videos, track watched videos",
-      "image": "/project1.jpg",
-      "isFeatured": true,
-      "url": "https://videotube.merakishubh.com"
     },
     {
       "id": 5,
